@@ -97,8 +97,10 @@ pdfauthor={\UTIASauthor},
 pdfkeywords={},
 pdfsubject={\UTIASprogram},
 pdfstartview={},
+citecolor=Violet,
 urlcolor=Cerulean,
 linkcolor=BlueViolet,
+linktoc=number
 }%
 \urlstyle{same}
 % Define some hyphenation
@@ -109,12 +111,13 @@ linkcolor=BlueViolet,
 
 % Defining the title
 
-\title{\sf\bfseries\UTIAStitle}
+\title{\sf\bfseries\UTIAStitle\\
+\vspace{14pt}\sf\Large\UTIASdocument
+}
 \author{\large\sf\UTIASauthor\\
 \normalsize\texttt\UTIASemail\\
-\normalsize\UTIASreviewer%
+\sf\normalsize\UTIASreviewer%
 }
-
 % ---------------------------------------------------------------
 % \section font sizes
 
@@ -175,14 +178,16 @@ linkcolor=BlueViolet,
 \allsectionsfont{\sf\bfseries}
 
 % Set the caption labeling font
-\renewcommand{\captionlabelfont}{\sf\bfseries}
+\renewcommand{\captionlabelfont}{\small\sf\bfseries}
+\renewcommand{\captionfont}{\small\sf}
+\renewcommand{\belowcaptionskip}{12pt}
 
 % ---------------------------------------------------------------
 
 % Set the page headers and footers.
 \lhead{\begin{tabular}[b]{l}\sc{University of Toronto} \\ \sc{Institute for Aerospace Studies}\\ \mbox{}\end{tabular}}
 \rhead{ \begin{tabular}[b]{r}\small\sf \UTIASdocument\\
-\small\sf \UTIASauthor\\
+\small\sf\UTIASshortauthor\\
 \small\sf\displaydate{date}\\
 \small\sf\UTIASrevision\ifx\UTIASrevision\empty\fi%
 \end{tabular}}
