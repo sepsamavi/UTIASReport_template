@@ -50,10 +50,18 @@
 \newcommand{\UTIASemail}{\href{mailto:example@example.com}{example@example.com}}
 \newcommand{\UTIASreviewer}{}
 % The date for the document in format: {dd}{mm}{yyyy}
-\newdate{date}{12}{04}{2022} % uses the datetime pkg
+\newdate{date}{14}{04}{2022} % uses the datetime pkg
 
 % All the definitions from the original template DO NOT MOVE UP
 \usepackage{utiastemplate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% User Input: User Defined Acronyms
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\acrodef{UofT}{University of Toronto}
+\acrodef{UTIAS}{University of Toronto Institute for Aerospace Studies}
+\acrodef{UofT RI}{University of Toronto Robotics Institute}
+\acrodef{ROS}{Robot Operating System}
+% Can use via \ac{ROS}, for example.
 
 \begin{document}
 
