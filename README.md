@@ -1,2 +1,2 @@
 # Report template
-My template for a simple single-column report in LaTex.
+My adaptation of the TR-Template used for reports at the University of Toronto Institute for Aerospace Studies (UTIAS).

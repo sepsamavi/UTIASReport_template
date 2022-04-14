@@ -1,5 +1,5 @@
 {
   "root" : "./root.tex",
-  "toolchain" : " lualatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error %DOC.%EXT && %BIB %DOC && lualatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error %DOC.%EXT && lualatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error %DOC.%EXT",
+  "toolchain" : "pdflatex -shell-escape -synctex=0 -interaction=nonstopmode -file-line-error -pdf %DOC && %BIB %DOC && pdflatex -shell-escape -synctex=0 -interaction=nonstopmode -file-line-error -pdf %DOC && pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error -pdf %DOC",
   "latex_ext": [".tikz", ".Rnw"]
 }

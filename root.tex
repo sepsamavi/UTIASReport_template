@@ -1,16 +1,36 @@
+% Adapted from the TR-Template
+\documentclass[11pt,letterpaper,fleqn,oneside,margin=2in]{article}
+\usepackage[letterpaper,left=25mm,right=25mm,top=25mm,bottom=25mm]{geometry}
 
-\documentclass[11pt,letterpaper]{article}
+% Packages
+\usepackage{sectsty}
+\usepackage{caption}
+% \usepackage{pslatex}
+% \usepackage{times}
+\usepackage{amssymb,amsfonts,amsmath,amscd}
+\usepackage[pdftex,colorlinks]{hyperref}
+\usepackage[pdftex]{graphicx}
+\usepackage{fnpos}
+\usepackage{subfigure}
+\usepackage{verbatim}
+\usepackage{fancyhdr}
+\usepackage{pifont}
+\usepackage{setspace}
 
+%%%%%%%%%%%%%%%%%%%
+% Sepehr's Packages
+%%%%%%%%%%%%%%%%%%%
+% replace times pkg:
+\usepackage{mathptmx}
+\usepackage[scaled=1.0]{helvet}
+\usepackage{courier}
+% other additional packages
 \usepackage{cite}
-\usepackage{xcolor}
-\usepackage{graphicx} % for pdf, bitmapped graphics files
+\usepackage[dvipsnames]{xcolor}
 \usepackage[utf8]{inputenc}
-\usepackage{amsmath} % assumes amsmath package installed
-\usepackage{amssymb}  % assumes amsmath package installed
 \usepackage{array}  % for table column width
-\usepackage{xcolor}  % for colored text
-\usepackage[colorlinks,bookmarksopen,bookmarksnumbered,citecolor=red,urlcolor=blue]{hyperref}
-\usepackage{acronym}
+\usepackage{datetime} % to set and format the date
+\usepackage{acronym} % to define and deal with acroyms
 
 % Packages for plotting
 \usepackage{tikz}
@@ -18,30 +38,64 @@
 \pgfplotsset{compat=newest}
 \usepgfplotslibrary{groupplots}
 
-\acrodef{MPC}{Model Predictive Control}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% User Input: Document Meta Information
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Insert the program, document title, author, etc.
+\newcommand{\UTIASprogram}{N/A}
+\newcommand{\UTIAStitle}{The Title}
+\newcommand{\UTIASdocument}{UTIAS Report Template}
+\newcommand{\UTIASrevision}{}
+\newcommand{\UTIASauthor}{Sepehr Samavi}
+\newcommand{\UTIASemail}{\href{mailto:example@example.com}{example@example.com}}
+\newcommand{\UTIASreviewer}{}
+% The date for the document in format: {dd}{mm}{yyyy}
+\newdate{date}{12}{04}{2022} % uses the datetime pkg
 
-\title{\textbf{The Title}}
-
-\author{Sepehr Samavi% <-this % stops a space
-\\\href{mailto:sepehr@robotics.utias.utoronto.ca}{\tt\small sepehr@robotics.utias.utoronto.ca}
-% \thanks{Sepehr Samavi is with the University of Toronto Institute for Aerospace Studies (UTIAS) and the Vector Institute for Artificial Intelligence.
-% {\tt\small sepehr@robotics.utias.utoronto.ca}.}%
-% \thanks{We acknowledge the support of the Natural Sciences and Engineering Research Council of Canada (NSERC). Computing resources used in preparing this research were provided, in part, by the Province of Ontario, the Government of Canada through CIFAR, and companies sponsoring the Vector Institute for Artificial Intelligence.}% <-this % stops a space
-}
+% All the definitions from the original template DO NOT MOVE UP
+\usepackage{utiastemplate}
 
 \begin{document}
-\maketitle
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The title page
+\maketitle%
+
 \begin{abstract}
-The abstract.
+Here is the abstract.
 \end{abstract}
+
+% The table of contents
+\newpage
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% User Input: Document Contents
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Section}
+\newpage
+\onehalfspacing
+\section{First Section}
+Lorem ipsum dolor est.
 
+% \include{sections/intro}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\singlespacing
 \nocite{*}
+\bibliographystyle{ieeetr}
+%\setlength{\parskip}{1pt}
+\normalsize
+\bibliography{references}
 
-\bibliographystyle{IEEEtran}
-\bibliography{IEEEabrv, references}
+
+
+
+%\newpage
+%\appendix
+%\section{Appendix Title}
+%\subsection{Subsection of Appendix}
 
 \end{document}
