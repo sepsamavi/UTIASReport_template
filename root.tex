@@ -1,0 +1,47 @@
+
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage{cite}
+\usepackage{xcolor}
+\usepackage{graphicx} % for pdf, bitmapped graphics files
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath} % assumes amsmath package installed
+\usepackage{amssymb}  % assumes amsmath package installed
+\usepackage{array}  % for table column width
+\usepackage{xcolor}  % for colored text
+\usepackage[colorlinks,bookmarksopen,bookmarksnumbered,citecolor=red,urlcolor=blue]{hyperref}
+\usepackage{acronym}
+
+% Packages for plotting
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{groupplots}
+
+\acrodef{MPC}{Model Predictive Control}
+
+\title{\textbf{The Title}}
+
+\author{Sepehr Samavi% <-this % stops a space
+\\\href{mailto:sepehr@robotics.utias.utoronto.ca}{\tt\small sepehr@robotics.utias.utoronto.ca}
+% \thanks{Sepehr Samavi is with the University of Toronto Institute for Aerospace Studies (UTIAS) and the Vector Institute for Artificial Intelligence.
+% {\tt\small sepehr@robotics.utias.utoronto.ca}.}%
+% \thanks{We acknowledge the support of the Natural Sciences and Engineering Research Council of Canada (NSERC). Computing resources used in preparing this research were provided, in part, by the Province of Ontario, the Government of Canada through CIFAR, and companies sponsoring the Vector Institute for Artificial Intelligence.}% <-this % stops a space
+}
+
+\begin{document}
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+The abstract.
+\end{abstract}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Section}
+
+\nocite{*}
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv, references}
+
+\end{document}

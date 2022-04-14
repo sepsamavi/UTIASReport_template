@@ -1,0 +1,5 @@
+{
+  "root" : "./root.tex",
+  "toolchain" : " lualatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error %DOC.%EXT && %BIB %DOC && lualatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error %DOC.%EXT && lualatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error %DOC.%EXT",
+  "latex_ext": [".tikz", ".Rnw"]
+}
